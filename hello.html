@@ -3,191 +3,82 @@
 <html lang="fr">
 
     <head>
-
-       
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-       
-
         <title>Formation GIT</title>
-
-       
-
         <link rel="stylesheet" href="./style.css">
-
- 
-
     </head>
 
-   
-
     <body>
-
- 
-
         <div id="top-banner">
-
             <h1>Udemy - Formation Git et GitHub : de Débutant à Confirmé </h1>
-
         </div>
 
-       
-
         <h2>Pour configurer git</h2>
-
             <ul>
-
                 <li>git config --global user.name "Nicolas GAUTIER"</li>
-
                 <li>git config --global user.email monemail.com</li>
-
-                <li>git config --global --list</li><!--Permet de voir les paramètres de configuration-->
-
-                <li>git init</li><!--Permet d'initialiser git-->
-
+                <li>git config --global --list <i>: Permet de voir les paramètres de configuration </i></li>
+                <li>git init <i>: Permet d'initialiser git</i></li>	
             </ul>
 
- 
-
         <h2>Les commandes pour gérer :</h2>
-
             <h3>l'indexation</h3>
-
                 <ul>
-
-                    <li>git add [nom du fichier]</li><!-- Permet d'ajouter à l'index -->
-
-                    <li>git reset [nom du fichier]</li><!-- Retire de l'index -->
-
-                    <li>git add .</li><!-- Permet d'ajouter toutes les modifications à l'index -->
-
+                    <li>git add [nom du fichier] <i>: Permet d'ajouter à l'index</i></li>                    
+					<li>git reset [nom du fichier] <i> : Retire de l'index</i></li>
+                    <li>git add . <i>: Permet d'ajouter toutes les modifications à l'index</i></li>
                 </ul>
 
             <h3>le commit</h3>
-
                 <ul>
-
-                    <li>git commit -m"écrire un message"</li><!-- Permet d'ajouter un commit avec un message -->
-
-                    <li></li>
-
+                    <li>git commit -m"écrire un message" <i> : Permet d'ajouter un message</i></li>
+					<li>git commit --amend -m"nouveau message" <i>: Modifier le message du commit</i></li>
                 </ul>
 
- 
-
         <h2>Afficher les modifications en cours</h2>
-
             <ul>
-
-                <li>git diff [nom de fichier]</li>
-
-                <!-- Permet de voir la différence dans un fichier -->
-
-                <li>git diff</li>
-
-                <!-- Permet de voir la différence dans tous les fichiers -->
-
-                <li>git diff --cached [nom de fichier]</li>
-
-                <!-- Permet de voir la différence dans un fichier de la zone d'index-->
-
-                <li>git diff --cached</li>
-
-                <!-- Permet de voir la différence dans tous les fichiers dans la zone d'index -->
-
+                <li>git diff [nom de fichier] <i>: Permet de voir la différence dans un fichier</i></li>
+                <li>git diff <i>: Permet de voir la différence dans tous les fichiers</i></li>
+                <li>git diff --cached [nom de fichier] <i>: Permet de voir la différence dans un fichier de la zone d'index</i></li>
+                <li>git diff --cached <i>: Permet de voir la différence dans tous les fichiers de la zone d'index</i></li>
             </ul>
 
-       
-
         <h2>Voyager dans l'historique</h2>
-
             <h3>Afficher la liste des commits</h3>
-
                 <ul>
-
-                    <li>git log</li>
-
-                    <!-- Affiche la liste des commits -->
-
-                    <li>git log -n</li>
-
-                    <!-- Affiche les n derniers commits -->
-
-                    <li>git show [numéro SHA1 (= du commit) ou tag] <i>se mettre sur le numéro double cliquer puis clic de mollette</i></li>
-
-                    <!-- Permet de voir le contenu du commit-->
-
+                    <li>git log <i>: Affiche la liste des commits</i></li>
+                    <li>git log -n <i>: Affiche les n derniers commits</i></li>
+                    <li>git show [numéro SHA1 (= du commit) ou tag] <i>se mettre sur le numéro double cliquer puis clic de mollette : montre le contenu du commit</i></li>
                 </ul>
 
             <h3>Se déplacer dans les commits</h3>
-
                 <ul>
-
-                    <li>git check out [numéro du commit ou tag]</li>
-
-                    <!-- Déplace le tag HEAD (commit acctuel) sur le commit visé -->
-
-                    <li>git checkout master</li>
-
-                    <!-- Déplace le tag HEAD (commit acctuel) sur le dernier commit -->
-
+                    <li>git check out [numéro du commit ou tag] <i>: Déplace le tag HEAD (commit actuel) sur le commit visé</i></li>
+                    <li>git checkout master <i>: Déplace le tag HEAD (commit acctuel) sur le dernier commit</i></li>
                 </ul>
 
             <h3>Créer des tags pour se déplacer plus vite dans l'historique</h3>
-
             <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
-
             Le tag créé reste attaché au commit sur lequel on l'a créé.
-
             Le tag permet de naviguer plus facilement et d'identifier une version.</p>
-
                 <ol>
-
-                    <li>1/ Se placer sur le commit : git check out [numéro du commit ou tag]</li>
-
-                    <!-- Déplace le tag HEAD (commit acctuel) sur le commit visé -->
-
+                    <li>1/ Se placer sur le commit : git check out [numéro du commit ou tag] <i> : Déplace le tag HEAD (commit acctuel) sur le commit visé</i></li>
                     <li>2/ Utiliser les commandes :</li>
-
                         <ul>
-
-                            <li>git tag [nom du tag]</li>
-
-                            <!-- Nomme un tag -->
-
-                            <li>git tag --delete [nom du tag]</li>
-
-                            <!-- Supprime le tag -->
-
-                            <li>git tag [nom du tag] -m"écrire u message comme un commit"</li>
-
-                            <!-- Crée un tag avec message -->
-
+                            <li>git tag [nom du tag] <i>: Nomme un tag</i></li>
+                            <li>git tag --delete [nom du tag] <i>: Supprime un tag</i></li>
+                            <li>git tag [nom du tag] -m"écrire u message comme un commit" <i> : Ecrire un message avec un tag</i></li>
                         </ul>
-
                 </ol>
 
         <div id="top-banner">
-
             Bienvenue dans cette formation GIT !
-
         </div>
-
- 
 
         <div>
-
             <p>Une brève description de qui je suis.</p>
-
         </div>
-
- 
-
         <b>Un truc à effacer</b>
 
 </body>
-
- 
-
 </html>
