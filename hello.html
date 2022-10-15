@@ -60,7 +60,7 @@
             <h3>Créer des tags pour se déplacer plus vite dans l'historique</h3>
             <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
             Le tag créé reste attaché au commit sur lequel on l'a créé.
-            Le tag permet de naviguer plus facilement et d'identifier une version.</p>
+            Le tag permet de naviguer plus facilement et d'identifier une version. Par exemple, le tag mon_site_web_V1.</p>
                 <ol>
                     <li>1/ Se placer sur le commit : git check out [numéro du commit ou tag] <i> : Déplace le tag HEAD (commit acctuel) sur le commit visé</i></li>
                     <li>2/ Utiliser les commandes :</li>
@@ -71,6 +71,19 @@
                         </ul>
                 </ol>
 
+			<h3>Cloner un dépôt git</h3>
+				<ul>
+					<li>git clone [adresse du dossier récupéré sur GitHub] [nom du dossier]</li>
+					<li>cd [nom du dossier]</li>
+					<li>git config user.name <i>: Modifier le nom pour ce dépôt</i></li>
+				</ul>
+
+			<h3>Gérer les remote</h3>
+				<ul>
+					<li>git remote add [url de GitHub] <i>: Initialise le remote distant</i></li>
+					<li>git remote -v <i>: Affiche la liste des remote</i></li>
+					<li>git remote show [nom du remote]</li>
+				</ul>
         <div id="top-banner">
             Bienvenue dans cette formation GIT !
         </div>
