@@ -86,12 +86,22 @@
 			</ul>
 
 		<h2>Pousser ses commits sur le dépôt distant</h2>
-		<ul>
-			<li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant</i></li>
-			<li>git remote -v <i>: Affiche la liste des remote</i></li>
-			<li>git remote show [nom du remote]</li>
-			<li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
-		</ul>
+			<ul>
+				<li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant (indiquer -u pour ne plus avoir à taper le nom du remote)</i></li>
+				<li>git remote -v <i>: Affiche la liste des remote</i></li>
+				<li>git remote show [nom du remote]</li>
+				<li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
+				<li>git push origin --tags <i>: Pousse tous les tags</i></li>
+			</ul>
+		
+		<h2>Récupérer les commits présents sur le dépôt distant</h2>
+			<ul>
+				<li>git fetch : <i>Permet de récupérer les informations du serveur distant</i></li>
+                <li>git fetch --prune : <i>Permet de nettoyer les branches obsolètes</i></li>
+				<li>git pull : <i>Appliquer les modifications au dépôt local : déplace le tag master (On peut faire uniquement git pull au lieu de fetch)</i></li>
+                <li><b>toujours un git pull / jamais de git fetch seul</b></li>
+			</ul>
+
 
         <div id="top-banner">
             Bienvenue dans cette formation GIT !
