@@ -21,94 +21,97 @@
                 <li>git init <i>: Permet d'initialiser git</i></li>	
             </ul>
 
-        <h2>Les commandes pour gérer :</h2>
-            <h3>l'indexation</h3>
-                <ul>
-                    <li>git add [nom du fichier] <i>: Permet d'ajouter à l'index</i></li>                    
-					<li>git reset [nom du fichier] <i> : Retire de l'index</i></li>
-                    <li>git add . <i>: Permet d'ajouter toutes les modifications à l'index</i></li>
-                </ul>
-
-            <h3>le commit</h3>
-                <ul>
-                    <li>git commit -m"écrire un message" <i> : Permet d'ajouter un message</i></li>
-					<li>git commit --amend -m"nouveau message" <i>: Modifier le message du commit</i></li>
-                </ul>
-
-        <h2>Afficher les modifications en cours</h2>
-            <ul>
-                <li>git diff [nom de fichier] <i>: Permet de voir la différence dans un fichier</i></li>
-                <li>git diff <i>: Permet de voir la différence dans tous les fichiers</i></li>
-                <li>git diff --cached [nom de fichier] <i>: Permet de voir la différence dans un fichier de la zone d'index</i></li>
-                <li>git diff --cached <i>: Permet de voir la différence dans tous les fichiers de la zone d'index</i></li>
-            </ul>
-
-        <h2>Voyager dans l'historique</h2>
-            <h3>Afficher la liste des commits</h3>
-                <ul>
-                    <li>git log <i>: Affiche la liste des commits</i></li>
-                    <li>git log -n <i>: Affiche les n derniers commits</i></li>
-                    <li>git show [numéro SHA1 (= du commit) ou tag] <i>se mettre sur le numéro double cliquer puis clic de mollette : montre le contenu du commit</i></li>
-                    <li>pour sortir de logs trop longs : appuyer sur Q</li>
-                </ul>
-
-            <h3>Se déplacer dans les commits</h3>
-                <ul>
-                    <li>git check out [numéro du commit ou tag] <i>: Déplace le tag HEAD (commit actuel) sur le commit visé</i></li>
-                    <li>git checkout master <i>: Déplace le tag HEAD (commit acctuel) sur le dernier commit</i></li>
-                </ul>
-
-            <h3>Créer des tags pour se déplacer plus vite dans l'historique</h3>
-            <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
-            Le tag créé reste attaché au commit sur lequel on l'a créé.
-            Le tag permet de naviguer plus facilement et d'identifier une version. Par exemple, le tag MON_SITE_V1.</p>
-                <ol>
-                    <li>Se placer sur le commit : git check out [numéro du commit ou tag] <i> : Déplace le tag HEAD (commit acctuel) sur le commit visé</i></li>
-                    <li>Utiliser les commandes :</li>
+            <h2>Gérer les commits</h2>
+                <h3>Les commandes pour gérer :</h3>
+                    <h4>l'indexation</h4>
                         <ul>
-                            <li>git tag [nom du tag] <i>: Nomme un tag</i></li>
-                            <li>git tag --delete [nom du tag] <i>: Supprime un tag</i></li>
-                            <li>git tag [nom du tag] -m"écrire u message comme un commit" <i> : Ecrire un message avec un tag</i></li>
+                            <li>git add [nom du fichier] <i>: Permet d'ajouter à l'index</i></li>                    
+                            <li>git reset [nom du fichier] <i> : Retire de l'index</i></li>
+                            <li>git add . <i>: Permet d'ajouter toutes les modifications à l'index</i></li>
                         </ul>
+
+                    <h4>le commit</h4>
+                        <ul>
+                            <li>git commit -m"écrire un message" <i> : Permet d'ajouter un message</i></li>
+                            <li>git commit --amend -m"nouveau message" <i>: Modifier le message du commit</i></li>
+                        </ul>
+
+                <h3>Afficher les modifications en cours</h3>
+                    <ul>
+                        <li>git diff [nom de fichier] <i>: Permet de voir la différence dans un fichier</i></li>
+                        <li>git diff <i>: Permet de voir la différence dans tous les fichiers</i></li>
+                        <li>git diff --cached [nom de fichier] <i>: Permet de voir la différence dans un fichier de la zone d'index</i></li>
+                        <li>git diff --cached <i>: Permet de voir la différence dans tous les fichiers de la zone d'index</i></li>
+                    </ul>
+
+                <h3>Voyager dans l'historique</h3>
+                    <h4>Afficher la liste des commits</h4>
+                        <ul>
+                            <li>git log <i>: Affiche la liste des commits</i></li>
+                            <li>git log -n <i>: Affiche les n derniers commits</i></li>
+                            <li>git show [numéro SHA1 (= du commit) ou tag] <i>se mettre sur le numéro double cliquer puis clic de mollette : montre le contenu du commit</i></li>
+                            <li>pour sortir de logs trop longs : appuyer sur Q</li>
+                        </ul>
+
+                    <h4>Se déplacer dans les commits</h4>
+                        <ul>
+                            <li>git check out [numéro du commit ou tag] <i>: Déplace le tag HEAD (commit actuel) sur le commit visé</i></li>
+                            <li>git checkout master <i>: Déplace le tag HEAD (commit acctuel) sur le dernier commit</i></li>
+                        </ul>
+
+                    <h4>Créer des tags pour se déplacer plus vite dans l'historique</h4>
+                    <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
+                    Le tag créé reste attaché au commit sur lequel on l'a créé.
+                    Le tag permet de naviguer plus facilement et d'identifier une version. Par exemple, le tag MON_SITE_V1.</p>
+                        <ol>
+                            <li>Se placer sur le commit : git check out [numéro du commit ou tag] <i> : Déplace le tag HEAD (commit acctuel) sur le commit visé</i></li>
+                            <li>Utiliser les commandes :</li>
+                                <ul>
+                                    <li>git tag [nom du tag] <i>: Nomme un tag</i></li>
+                                    <li>git tag --delete [nom du tag] <i>: Supprime un tag</i></li>
+                                    <li>git tag [nom du tag] -m"écrire u message comme un commit" <i> : Ecrire un message avec un tag</i></li>
+                                </ul>
+                        </ol>
+
+        <h2>Utiliser un dépôt distant</h2>
+            <h3>Cloner un dépôt git</h3>
+                <ol>
+                    <li>git clone [adresse du dossier récupéré sur GitHub] [nom du dossier]</li>
+                    <li>cd [nom du dossier]</li>
+                    <li>git config user.name <i>: Modifier le nom pour ce dépôt</i></li>
                 </ol>
 
-		<h2>Cloner un dépôt git</h2>
-			<ol>
-				<li>git clone [adresse du dossier récupéré sur GitHub] [nom du dossier]</li>
-				<li>cd [nom du dossier]</li>
-				<li>git config user.name <i>: Modifier le nom pour ce dépôt</i></li>
-			</ol>
+            <h3>Gérer les remote</h3>
+                <ul>
+                    <li>git remote add [url de GitHub] <i>: Initialise le remote distant</i></li>
+                    <li>git remote -v <i>: Affiche la liste des remote</i></li>
+                    <li>git remote show [nom du remote]</li>
+                </ul>
 
-		<h2>Gérer les remote</h2>
-			<ul>
-				<li>git remote add [url de GitHub] <i>: Initialise le remote distant</i></li>
-				<li>git remote -v <i>: Affiche la liste des remote</i></li>
-				<li>git remote show [nom du remote]</li>
-			</ul>
-
-		<h2>Pousser ses commits sur le dépôt distant</h2>
-			<ul>
-				<li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant (indiquer -u pour ne plus avoir à taper le nom du remote)</i></li>
-				<li>git remote -v <i>: Affiche la liste des remote</i></li>
-				<li>git remote show [nom du remote]</li>
-				<li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
-				<li>git push origin --tags <i>: Pousse tous les tags</i></li>
-			</ul>
-		
-		<h2>Récupérer les commits présents sur le dépôt distant</h2>
-			<ul>
-				<li>git fetch : <i>Permet de récupérer les informations du serveur distant</i></li>
-                <li>git fetch --prune : <i>Permet de nettoyer les branches obsolètes</i></li>
-				<li>git pull : <i>Appliquer les modifications au dépôt local : déplace le tag master (On peut faire uniquement git pull au lieu de fetch)</i></li>
-                <li><b>toujours un git pull / jamais de git fetch seul</b></li>
-			</ul>
-        
-        <h2>Ajouter un fichier readme</h2>
-            <ul>
-                <li>echo "écrire un truc" >> README.md : <i>Créer un fichier dans dépôt local</i></li>
-                <li>cat README.md : <i>Affiche le fichier</i></li>
-                <li>git add ., git commit -m"", git push</li>
-            </ul>
-
+            <h3>Pousser ses commits sur le dépôt distant</h3>
+                <ul>
+                    <li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant (indiquer -u pour ne plus avoir à taper le nom du remote)</i></li>
+                    <li>git remote -v <i>: Affiche la liste des remote</i></li>
+                    <li>git remote show [nom du remote]</li>
+                    <li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
+                    <li>git push origin --tags <i>: Pousse tous les tags</i></li>
+                </ul>
+            
+            <h3>Récupérer les commits présents sur le dépôt distant</h3>
+                <ul>
+                    <li>git fetch : <i>Permet de récupérer les informations du serveur distant</i></li>
+                    <li>git fetch --prune : <i>Permet de nettoyer les branches obsolètes</i></li>
+                    <li>git pull : <i>Appliquer les modifications au dépôt local : déplace le tag master (On peut faire uniquement git pull au lieu de fetch)</i></li>
+                    <li><b>toujours un git pull / jamais de git fetch seul</b></li>
+                </ul>
+            
+            <h3>Ajouter un fichier readme</h3>
+                <ul>
+                    <li>echo "écrire un truc" >> README.md : <i>Créer un fichier dans dépôt local</i></li>
+                    <li>cat README.md : <i>Affiche le fichier</i></li>
+                    <li>git add ., git commit -m"", git push</li>
+                </ul>
+                
+        <h2>Travailler en équipe</h2>
 </body>
 </html>
