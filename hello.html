@@ -14,7 +14,7 @@
         </div>
 
         <p><b>Chaque ligne correspond à une commande. L'explication de la commande figure après ":"</b></p>
-        <br>
+
         <h2>Pour configurer git</h2>
             <ul>
                 <li>git config --global user.name "Nicolas GAUTIER"</li>
@@ -122,13 +122,50 @@
                     <li>git blame -L [indiquer les lignes voulues] [nom du fichier] : <i>Avoir les informations sur les lignes</i></li>
                     <li>git blame -L [indiquer les lignes voulues][,+4] [nom du fichier] : <i>Avoir les informations sur les lignes et les 4 qui suivent</i></li>
                 </ul>
+
             <h3>Filtrer les modifications</h3>
                 <ul>
                     <li>touch .gitignore : <i>Créer un fichier gitignore / Mettre un point permet de cacher le fichier</i></li>
                     <li>mkdir tmp : <i>Créer un dossier tmp</i></li>
                     <li>echo "écrire un message" > todo.tx : <i>Créer le fichier todo.txt et inclut le texte du message</i></li>
-                    <li></li>
                 </ul>
+
+            <h3>Mettre de côté des modifications</h3>
+                <ul>
+                    <li>git stash save "écrire un message" : <i>Intègre des modifications au stash avant checkout</i></li>
+                    <li>git stash list : <i>Lister les stash</i></li>
+                    <li>git stash show [index du stah]: <i>Détail du stash</i></li>
+                    <li>git pop [index du stash] : <i>Injecte le stash</i></li>
+                </ul>
+
+            <h3>Faire un merge de fichier</h3>
+                <ul>
+                    <li>git pull ne foctionne pas car il y a un conflit : utiliser git stash, git pull, git stash pop</li>
+                    <li>s'il y a un conflit, éditer le fichier puis supprimer les lignes ajoutées par git et arbitrer le conflit</li>
+                </ul>
+            
+            <h3>Faire un merge de commit</h3>
+                <ol>
+                    <li>add, commit, push -> cela ne fonctionne pas</li>
+                    <li>le git pull entraîne un conflit</li>
+                    <li>éditer le fichier, suppression des lignes de git, arbitrer (si on veut annuler la récupération du commit, git merge --abort)</li>
+                    <li>git add nomfichier</li>
+                    <li>git commit -m"merge commit"</li>
+                    <li>git push</li>
+                </ol>
+            
+            <h3>Faire un rebase de commit</h3>
+                <ol>
+                    <li>add, commit, push -> cela ne fonctionne pas</li>
+                    <li>git pull --rebase : <i>Merge + évite un commit de merge</i></li>
+                </ol>
         
+        <h2>Le système de branche</h2>
+            <h3>Créer une branche</h3>
+                <ul>
+                    <li>git branch [nom de la branche] : <i>Créer la branche</i></li>
+                    <li>git branch : <i>Lister les branches</i></li>
+                    <li>...</li>
+                </ul>
 </body>
 </html>
