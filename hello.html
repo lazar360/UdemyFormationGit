@@ -30,13 +30,13 @@
                             <li>git add [nom du fichier] <i>: Permet d'ajouter à l'index</i></li>                    
                             <li>git reset [nom du fichier] <i> : Retire de l'index</i></li>
                             <li>git add . <i>: Permet d'ajouter toutes les modifications à l'index</i></li>
-                            <li>git restore [nom du fichier] : <i>Restore le fichier selon le dernier commit</i></li>
                         </ul>
 
                     <h4>le commit</h4>
                         <ul>
                             <li>git commit -m"écrire un message" <i> : Permet d'ajouter un message</i></li>
-                            <li>git commit --amend -m"nouveau message" <i>: Modifier le message du commit</i></li>
+                            <li>git commit --amend -m"nouveau message" <i>: Modifie le message du commit</i></li>
+                            <li>git restore [nom du fichier] : <i>Restore le fichier selon le dernier commit</i></li>
                         </ul>
 
                 <h3>Afficher les modifications en cours</h3>
@@ -52,7 +52,7 @@
                         <ul>
                             <li>git log <i>: Affiche la liste des commits</i></li>
                             <li>git log -n <i>: Affiche les n derniers commits</i></li>
-                            <li>git show [numéro SHA1 (= du commit) ou tag] <i>se mettre sur le numéro double cliquer puis clic de mollette : montre le contenu du commit</i></li>
+                            <li>git show [numéro SHA1 (= du commit) ou tag] <i>Se mettre sur le numéro double cliquer puis clic de mollette : montre le contenu du commit</i></li>
                             <li>pour sortir de logs trop longs : appuyer sur Q</li>
                         </ul>
 
@@ -63,25 +63,33 @@
                         </ul>
 
                     <h4>Créer des tags pour se déplacer plus vite dans l'historique</h4>
-                    <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
-                    Le tag créé reste attaché au commit sur lequel on l'a créé.
-                    Le tag permet de naviguer plus facilement et d'identifier une version. Par exemple, le tag MON_SITE_V1.</p>
+                        <p style="margin-left: 26px;">Le tag MASTER se positionne toujours sur le dernier commit.
+                        Le tag créé reste attaché au commit sur lequel on l'a créé.
+                        Le tag permet de naviguer plus facilement et d'identifier une version. Par exemple, le tag MON_SITE_V1.</p>
                         <ol>
                             <li>Se placer sur le commit : git check out [numéro du commit ou tag] <i> : Déplace le tag HEAD (commit acctuel) sur le commit visé</i></li>
                             <li>Utiliser les commandes :</li>
                                 <ul>
                                     <li>git tag [nom du tag] <i>: Nomme un tag</i></li>
                                     <li>git tag --delete [nom du tag] <i>: Supprime un tag</i></li>
-                                    <li>git tag [nom du tag] -m"écrire u message comme un commit" <i> : Ecrire un message avec un tag</i></li>
+                                    <li>git tag [nom du tag] -m"écrire u message comme un commit" <i> : Ecrit un message avec un tag</i></li>
                                 </ul>
                         </ol>
+                    
+                    <h4>Réécrire l'historique</h4>
+                        <ul>
+                            <li>git commit --amend : <i>Ajoute au dernier commit le contenu de la zone d'index et change le message de commit</i></li>
+                            <li>git revert[numéro du commit] : <i>Crée un nouveau commit qui est l'opposé du commit spécifié afin d'annuler ses effets</i></li>
+                            <li>git reset [numéro du commit : <i>Annule tous les commits après le commit spécifié, en conservant les modifications localement</i></li>
+                            <li>git reset --hard [numéro du commit] : <i>Supprime tout même localement</i></li>
+                        </ul>
 
         <h2>Utiliser un dépôt distant</h2>
             <h3>Cloner un dépôt git</h3>
                 <ol>
                     <li>git clone [adresse du dossier récupéré sur GitHub] [nom du dossier]</li>
                     <li>cd [nom du dossier]</li>
-                    <li>git config user.name <i>: Modifier le nom pour ce dépôt</i></li>
+                    <li>git config user.name <i>: Modifie le nom pour ce dépôt</i></li>
                 </ol>
 
             <h3>Gérer les remote</h3>
@@ -104,13 +112,13 @@
                 <ul>
                     <li>git fetch : <i>Permet de récupérer les informations du serveur distant</i></li>
                     <li>git fetch --prune : <i>Permet de nettoyer les branches obsolètes</i></li>
-                    <li>git pull : <i>Appliquer les modifications au dépôt local : déplace le tag master (On peut faire uniquement git pull au lieu de fetch)</i></li>
+                    <li>git pull : <i>Applique les modifications au dépôt local : déplace le tag master (On peut faire uniquement git pull au lieu de fetch)</i></li>
                     <li><b>toujours un git pull / jamais de git fetch seul</b></li>
                 </ul>
             
             <h3>Ajouter un fichier readme</h3>
                 <ul>
-                    <li>echo "écrire un truc" >> README.md : <i>Créer un fichier dans dépôt local</i></li>
+                    <li>echo "écrire un truc" >> README.md : <i>Crée un fichier dans dépôt local</i></li>
                     <li>cat README.md : <i>Affiche le fichier</i></li>
                     <li>git add ., git commit -m"", git push</li>
                 </ul>
@@ -118,23 +126,23 @@
         <h2>Travailler en équipe</h2>
             <h3>Maîtriser les modifications</h3>
                 <ul>
-                    <li>git blame [nom du fichier] : <i>Avoir les informations sur un fichier/pour quitter touche q et enter pour passer à la ligne suivante</i></li>
-                    <li>git blame -L [indiquer les lignes voulues] [nom du fichier] : <i>Avoir les informations sur les lignes</i></li>
-                    <li>git blame -L [indiquer les lignes voulues][,+4] [nom du fichier] : <i>Avoir les informations sur les lignes et les 4 qui suivent</i></li>
+                    <li>git blame [nom du fichier] : <i>Obtient les informations sur un fichier/pour quitter touche q et enter pour passer à la ligne suivante</i></li>
+                    <li>git blame -L [indiquer les lignes voulues] [nom du fichier] : <i>Récupère les informations sur les lignes</i></li>
+                    <li>git blame -L [indiquer les lignes voulues][,+4] [nom du fichier] : <i>Reprend les informations sur les lignes et les 4 qui suivent</i></li>
                 </ul>
 
             <h3>Filtrer les modifications</h3>
                 <ul>
-                    <li>touch .gitignore : <i>Créer un fichier gitignore / Mettre un point permet de cacher le fichier</i></li>
-                    <li>mkdir tmp : <i>Créer un dossier tmp</i></li>
-                    <li>echo "écrire un message" > todo.tx : <i>Créer le fichier todo.txt et inclut le texte du message</i></li>
+                    <li>touch .gitignore : <i>Crée un fichier gitignore / Mettre un point permet de cacher le fichier</i></li>
+                    <li>mkdir tmp : <i>Crée un dossier tmp</i></li>
+                    <li>echo "écrire un message" > todo.tx : <i>Crée le fichier todo.txt et inclut le texte du message</i></li>
                 </ul>
 
             <h3>Mettre de côté des modifications</h3>
                 <ul>
                     <li>git stash save "écrire un message" : <i>Intègre des modifications au stash avant checkout</i></li>
-                    <li>git stash list : <i>Lister les stash</i></li>
-                    <li>git stash show [index du stah]: <i>Détail du stash</i></li>
+                    <li>git stash list : <i>Liste les stash</i></li>
+                    <li>git stash show [index du stah]: <i>Détaille le stash</i></li>
                     <li>git pop [index du stash] : <i>Injecte le stash</i></li>
                 </ul>
 
@@ -163,13 +171,13 @@
         <h2>Le système de branche</h2>
             <h3>Créer une branche</h3>
                 <ul>
-                    <li>git branch [nom de la branche] : <i>Créer la branche</i></li>
+                    <li>git branch [nom de la branche] : <i>Crée la branche</i></li>
                     <li>git branch : <i>Lister les branches</i></li>
                 </ul>
             <h3>Récupérer une branche distante en local sur le dépôt</h3>
                 <ul>
                     <li>git branch -a : <i>Voir l'ensemble des branches présentes sur le serveur distant</i></li>
-                    <li>git checkout [nom de la branche] : <i>Créer la branche en local et se déplace dessus</i></li>
+                    <li>git checkout [nom de la branche] : <i>Crée la branche en local et se déplace dessus</i></li>
                 </ul>
             
             <h3>Copier un commit</h3>
@@ -180,7 +188,7 @@
             <h3>Faire un merge entre deux branches</h3>
                 <ol>
                     <li>On se positionne sur la branche absorbante git checkout</li>
-                    <li>git merge [branche à merger] : <i>Merger les branches</i></li>
+                    <li>git merge [branche à merger] : <i>Merge les branches</i></li>
                     <li>si conflit, éditer le fichier, le régler et push</li>
                 </ol>
 
@@ -189,14 +197,25 @@
                     <li>git rebase [commit cible du rebase] : <i>Repositionne les commits sur une branche, par exemple, master</i></li>
                     <li>si conflit, éditer, résoudre les conflits, git add [fichier], git rebase --continue</li>
                     <li>le master n'a pas bouger, git checkout [nom de la branche absorbante]</li>
-                    <li>git merge [nom de la branche à rebase]</li>
+                    <li>git merge [nom de la branche à rebase] : <i>Repositionne master sur head</i></li>
                 </ol>
             
             <h3>Supprimer une branche</h3>
                 <ul>
                     <li>ne pas se positionner sur la branche que l'on veut supprimer</li>
-                    <li>git branch -d [nom de la branche] : <i>Supprimer la branche en local</i></li>
-                    <li>git push [nom du remote] --delete [nom de la branche à supprimer] : <i>Supprimer la branche sur le serveur distant</i></li>
+                    <li>git branch -d [nom de la branche] : <i>Supprime la branche en local</i></li>
+                    <li>git push [nom du remote] --delete [nom de la branche à supprimer] : <i>Supprime la branche sur le serveur distant</i></li>
                 </ul>
+            
+            <h3>Créer une branche de suivi</h3>
+                <p>Créer une branche de suivi permet de ne pas suivre la branche principale. C'est très utile, par exemple, pour se servir d'un code existant dans le développement d'un autre module du projet</p>
+                <ul>
+                    <li>git checkout --track [origin/correctionserveur] : <i>Crée la branche de suivi correctionserveur en local</i></li>
+                    <li>git checkout [nom de la branche de suivi sur le serveur distant] : <i>Raccourci de la première commande (il faut que git affiche "track remote branch")</i></li>
+                    <li>git checkout nouvelleBranche : <i>Permet de naviguer entre la branche en cours de développement et la branche de suivi</i></li>
+                    <li>git checkout -b cs origin/correctionserveur : <i>Nomme la branche de suivi "cs"</i></li>
+                </ul>
+
+            
 </body>
 </html>
