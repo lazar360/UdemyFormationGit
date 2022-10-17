@@ -1,1 +1,1 @@
-Cette page web correspond à un mémo sur la formation Git et GitHub sur udemy
+Cette page web correspond à un mémo sur la formation Git et GitHub d'udemy
