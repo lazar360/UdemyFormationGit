@@ -1,81 +1,41 @@
 #top-banner {
-  color : rgb(255,255,255);
-    font-size: 30px;
-
-  background-color: rgba(30,30,30,0.7);
-  overflow: auto;
+  text-shadow:1px;
+  display:box; 
+  background: #274599; 
+  padding: 30px;color:#fff;
+  background-color:#2E8ECE;
+  border-radius: 10px;
+  text-shadow: #dcf9fd;
   text-align: center;
+  font-size: 30px;
 }
 
-#top-banner-img{
-  float:right;
+body {
+  background-color: #dcf9fd;
+  font-family: "Gill Sans", sans-serif;
 }
 
-
-
-#menu {
-  width: 260px;
-  height: 100%;
-  border-right:1px solid #ccc;
-  font-family: "Lato";
-  font-weight: normal;
-  font-size: 18px;
-  min-height: 500px;
-  background-color: rgba(30,30,30,0.7);
-  box-shadow: 3px 0px 5px rgba(0,0,0,.3);
-  position:absolute;
-  overflow:auto;
+h1 {
+  text-shadow:0 0 2px #00FFFC,0 0 30px #00FFFC,0px 0px 5px #00FFFC, 0 0 150px #00FFFC;color:#00FFFC;
+  background-color:#2E8ECE;
 }
 
-#menu .menu-button {
-  padding:0.01em 16px 8px;
-  line-height: 45px;
-  z-index: 5;
+h2{
+  text-shadow:#e7f6ff 0 -1px 0,
+  #333 5px 5px 10px;
+  color:#255056;
 }
 
-
-#menu .menu-button > a {
-  background-color:rgba(97,97,97,1);
-  color:#fff;
-  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
-  cursor: pointer;
-  padding:4px 2px 4px 16px;
-  display:block;
-  -webkit-transition:all 0.3s ease,color 0.15s ease;
-  transition:all 0.3s ease,color 0.15s ease;
-  text-decoration: none;
+h3{
+  text-shadow:#e7f6ff 0 -1px 0,
+  #333 5px 5px 10px;
+  color:#255056;
 }
 
-#menu .menu-button > a:hover {
-  color:#000!important;
-  background-color:#FFFFFF!important;
-  text-decoration: none;
+h4{
+  text-decoration: underline;
 }
 
-.menu-button-icon {
-  width: 38px;
-  height: 38px;
-  margin: 0px 10px -12px -5px;
+ul {
+  list-style-type: circle;
 }
-
-
-#top-banner, #menu {
-  border-color:#616161;
-}
-
-
-#toggle-menu-button:hover {
-  color:#757575;
-}
-
-#toggle-menu-button-label {
-  font-family: "Lato";
-  font-size: 14px;
-}
-
-#content {
-  margin-left: 300px;
-  margin-top: 40px;
-}
-
-
