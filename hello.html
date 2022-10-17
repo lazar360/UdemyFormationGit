@@ -166,11 +166,24 @@
                     <li>git branch [nom de la branche] : <i>Créer la branche</i></li>
                     <li>git branch : <i>Lister les branches</i></li>
                 </ul>
-            <h3>Récupérer une branche</h3>
+            <h3>Récupérer une branche distante en local sur le dépôt</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>git branch -a : <i>Voir l'ensemble des branches présentes sur le serveur distant</i></li>
+                    <li>git checkout [nom de la branche] : <i>Créer la branche en local et se déplace dessus</i></li>
                 </ul>
+            
+            <h3>Copier un commit</h3>
+                <ul>
+                    <li>git cherry-pick [numéro du commit] : <i>Copier un commit</i></li>
+                </ul>
+            
+            <h3>Faire un merge entre deux branches</h3>
+                <ul>
+                    <li>On se positionne sur la branche absorbante git checkout</li>
+                    <li>git merge [branche à merger] : <i>Merger les branches</i></li>
+                    <li>si conflit, éditer le fichier, le régler et push</li>
+                </ul>
+
+            <h3>Faire un rebase entre deux branches</h3>
 </body>
 </html>
