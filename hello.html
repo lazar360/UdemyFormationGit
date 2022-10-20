@@ -100,13 +100,20 @@
                 </ul>
 
             <h3>Pousser ses commits sur le dépôt distant</h3>
-                <ul>
-                    <li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant (indiquer -u pour ne plus avoir à taper le nom du remote)</i></li>
-                    <li>git remote -v <i>: Affiche la liste des remote</i></li>
-                    <li>git remote show [nom du remote]</li>
-                    <li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
-                    <li>git push origin --tags <i>: Pousse tous les tags</i></li>
-                </ul>
+                <h4>Avec gitbash, si rien ne se passe avec push</h4>
+                    <ol>
+                        <li>git config --global credential.helper manager : <i>Se référer à l'ancienne licence</i></li>
+                        <li>git remote set-url origin https://github.com/username/reponame : <i>Utiliser https au lieu de http (mis à jour)</i></li>
+                    </ol>
+
+                <h4>Commandes de base</h4>
+                    <ul>
+                        <li>git push -u [nom du remote] [nom de la branche] <i>: Initialise le remote distant (indiquer -u pour ne plus avoir à taper le nom du remote)</i></li>
+                        <li>git remote -v <i>: Affiche la liste des remote</i></li>
+                        <li>git remote show [nom du remote]</li>
+                        <li>git push origin [nom du tag] <i>: Pousse le tag sur le dépôt distant</i></li>
+                        <li>git push origin --tags <i>: Pousse tous les tags</i></li>
+                    </ul>
             
             <h3>Récupérer les commits présents sur le dépôt distant</h3>
                 <ul>
